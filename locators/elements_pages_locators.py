@@ -29,3 +29,14 @@ class RadioButtonPageLocators:
     IMPRESSIVE_BUTTON = (By.XPATH, '//*[@for="impressiveRadio"]')
     NO_BUTTON = (By.XPATH, '//*[@for="noRadio"]')
     OUTPUT_RESULT = (By.XPATH, '//*[@class="text-success"]')
+
+
+class WebTablesPageLocators:
+    ADD_BUTTON = (By.XPATH, '//*[@id="addNewRecordButton"]')
+    FIRST_NAME = (By.XPATH, '//*[@id="firstName"]')
+    LAST_NAME = (By.XPATH, '//*[@id="lastName"]')
+    EMAIL = (By.XPATH, '//*[@id="userEmail"]')
+    AGE = (By.XPATH, '//*[@id="age"]')
+    SALARY = (By.XPATH, '//*[@id="salary"]')
+    DEPARTMENT = (By.XPATH, '//*[@id="department"]')
+    SUBMIT = (By.XPATH, '//*[@id="submit"]')
