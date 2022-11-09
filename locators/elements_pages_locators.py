@@ -40,3 +40,6 @@ class WebTablesPageLocators:
     SALARY = (By.XPATH, '//*[@id="salary"]')
     DEPARTMENT = (By.XPATH, '//*[@id="department"]')
     SUBMIT = (By.XPATH, '//*[@id="submit"]')
+    #tables
+
+    FULL_PEOPLE_LIST = (By.XPATH, '//*[@class="rt-tr-group"]')

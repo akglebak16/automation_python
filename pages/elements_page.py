@@ -73,12 +73,10 @@ class RadioButtonPage(BasePage):
 
     def press_radio_button(self, choice):
         choices = {'yes': self.locators.YES_BUTTON,
-                  'impressive': self.locators.IMPRESSIVE_BUTTON,
-                  'no': self.locators.NO_BUTTON}
-
+                   'impressive': self.locators.IMPRESSIVE_BUTTON,
+                   'no': self.locators.NO_BUTTON}
 
         radio = self.element_is_visible(choices[choice]).click()
-
 
     def get_output_result(self):
         return self.element_is_present(self.locators.OUTPUT_RESULT).text
@@ -106,4 +104,11 @@ class WebTablesPage(BasePage):
             self.element_is_visible(self.locators.DEPARTMENT).send_keys(department)
             self.element_is_visible(self.locators.SUBMIT).click()
             count -= 1
-            return firstname, lastname, email, age, salary, department
+            return [firstname, lastname, str(age), email, str(salary), department]
+
+    def check_new_added_person(self):
+        people_list = self.elements_are_present(self.locators.FULL_PEOPLE_LIST)
+        data = []
+        for i in people_list:
+            data.append(i.text.splitlines())
+        return data
