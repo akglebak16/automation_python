@@ -112,3 +112,11 @@ class WebTablesPage(BasePage):
         for i in people_list:
             data.append(i.text.splitlines())
         return data
+
+    def search_some_person(self, key_words):
+        self.element_is_present(self.locators.SERCH_INPUT).send_keys(key_words)
+
+    def check_search_person(self):
+        delete_button = self.element_is_present(self.locators.DELETE_BUTTON)
+        row = delete_button.find_element(By.XPATH, ".//ancestor::div[@class='rt-tr-group']")
+        return row.text.splitlines()

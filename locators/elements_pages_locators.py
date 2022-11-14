@@ -43,3 +43,6 @@ class WebTablesPageLocators:
     #tables
 
     FULL_PEOPLE_LIST = (By.XPATH, '//*[@class="rt-tr-group"]')
+    SERCH_INPUT = (By.XPATH, '//*[@id="searchBox"]')
+    DELETE_BUTTON = (By.XPATH, '//span[@title="Delete"]')
+    ROW_PARENT = ".//ancestor::div[@class='rt-tr-group']"
