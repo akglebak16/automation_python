@@ -66,3 +66,23 @@ class TestElements:
             print(key_word)
             assert key_word in data
 
+        def test_web_table_update_person_info(self, driver):
+            web_table_page = WebTablesPage(driver, 'https://demoqa.com/webtables')
+            web_table_page.open()
+            lastname = web_table_page.add_new_person()[1]
+            web_table_page.search_some_person(lastname)
+            age = web_table_page.update_person_info()
+            time.sleep(4)
+            row = web_table_page.check_search_person()
+            print(age)
+            print(row)
+            assert age in row, "the person card has not been changed"
+
+        def test_web_table_delete_person_info(self, driver):
+            web_table_page = WebTablesPage(driver, 'https://demoqa.com/webtables')
+            web_table_page.open()
+            email = web_table_page.add_new_person()[3]
+            web_table_page.search_some_person(email)
+            web_table_page.delete_person()
+            text = web_table_page.check_deleted()
+            assert text == "No rows found"

@@ -46,3 +46,9 @@ class WebTablesPageLocators:
     SERCH_INPUT = (By.XPATH, '//*[@id="searchBox"]')
     DELETE_BUTTON = (By.XPATH, '//span[@title="Delete"]')
     ROW_PARENT = ".//ancestor::div[@class='rt-tr-group']"
+
+    #update
+    UPDATE_BUTTON = (By.XPATH, '//*[@id="edit-record-1"]')
+
+    #delete
+    NO_DATA_MESSAGE = (By.XPATH, '//*[@id="app"]/div/div/div[2]/div[2]/div[2]/div[3]/div[3]')
