@@ -4,6 +4,7 @@ from pages.elements_page import TextBoxPage
 from pages.elements_page import CheckBoxPage
 from pages.elements_page import RadioButtonPage
 from pages.elements_page import WebTablesPage
+from pages.elements_page import ButtonsPage
 
 
 class TestElements:
@@ -93,3 +94,9 @@ class TestElements:
             assert count == [5, 10, 20, 25, 50,
                              100], 'The number of rows in the table has not been changed or has changed incorrectly'
 
+
+class TestButtonPage():
+
+    def test_different_click_on_the_button(self,driver):
+        web_table_page = ButtonsPage(driver, 'https://demoqa.com/buttons')
+        web_table_page.open()

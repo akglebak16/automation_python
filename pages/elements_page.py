@@ -7,6 +7,7 @@ from locators.elements_pages_locators import TextBoxPageLocators
 from locators.elements_pages_locators import CheckBoxPageLocators
 from locators.elements_pages_locators import RadioButtonPageLocators
 from locators.elements_pages_locators import WebTablesPageLocators
+from locators.elements_pages_locators import ButtonsPageLocators
 from pages.base_page import BasePage
 
 
@@ -149,3 +150,6 @@ class WebTablesPage(BasePage):
     def check_count_rows(self):
         list_rows = self.elements_are_present(self.locators.FULL_PEOPLE_LIST)
         return len(list_rows)
+
+class ButtonsPage(BasePage):
+    locators = ButtonsPageLocators()
