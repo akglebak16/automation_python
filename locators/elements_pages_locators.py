@@ -52,3 +52,6 @@ class WebTablesPageLocators:
 
     #delete
     NO_DATA_MESSAGE = (By.XPATH, '//*[@id="app"]/div/div/div[2]/div[2]/div[2]/div[3]/div[3]')
+
+    #tables
+    COUNT_ROW_LIST = (By.XPATH, '//*[@id="app"]/div/div/div[2]/div[2]/div[2]/div[3]/div[2]/div/div[2]/span[2]/select')
