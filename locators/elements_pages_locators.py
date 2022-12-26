@@ -40,22 +40,30 @@ class WebTablesPageLocators:
     SALARY = (By.XPATH, '//*[@id="salary"]')
     DEPARTMENT = (By.XPATH, '//*[@id="department"]')
     SUBMIT = (By.XPATH, '//*[@id="submit"]')
-    #tables
+    # tables
 
     FULL_PEOPLE_LIST = (By.XPATH, '//*[@class="rt-tr-group"]')
     SERCH_INPUT = (By.XPATH, '//*[@id="searchBox"]')
     DELETE_BUTTON = (By.XPATH, '//span[@title="Delete"]')
     ROW_PARENT = ".//ancestor::div[@class='rt-tr-group']"
 
-    #update
+    # update
     UPDATE_BUTTON = (By.XPATH, '//*[@id="edit-record-1"]')
 
-    #delete
+    # delete
     NO_DATA_MESSAGE = (By.XPATH, '//*[@id="app"]/div/div/div[2]/div[2]/div[2]/div[3]/div[3]')
 
-    #tables
+    # tables
     COUNT_ROW_LIST = (By.XPATH, '//*[@id="app"]/div/div/div[2]/div[2]/div[2]/div[3]/div[2]/div/div[2]/span[2]/select')
 
-class ButtonsPageLocators:
 
-    DOBLE_BUTTON =
+class ButtonsPageLocators:
+    #button locators
+    DOUBLE_BUTTON = (By.XPATH, '//*[@id="doubleClickBtn"]')
+    RIGHT_CLICK_BUTTON = (By.XPATH, '//*[@id="rightClickBtn"]')
+    CLICK_ME_BUTTON = (By.XPATH, '//div[@class="mt-4"][2]/button')
+
+    # results
+    DOUBLE_CLICK_MESSAGE = (By.XPATH, '//*[@id="doubleClickMessage"]')
+    DOUBLE_RIGHT_MESSAGE = (By.XPATH, '//*[@id="rightClickMessage"]')
+    CLICK_ME_MESSAGE = (By.XPATH, '//*[@id="dynamicClickMessage"]')

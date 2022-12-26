@@ -1,6 +1,6 @@
 import time
 import random
-
+from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from generator.generator import generated_person
 from locators.elements_pages_locators import TextBoxPageLocators
@@ -153,3 +153,23 @@ class WebTablesPage(BasePage):
 
 class ButtonsPage(BasePage):
     locators = ButtonsPageLocators()
+
+    def double_click_button(self):
+        self.action_double_click(self.element_is_visible(self.locators.DOUBLE_BUTTON))
+
+    def right_click_button(self):
+        self.action_right_click(self.element_is_visible(self.locators.RIGHT_CLICK_BUTTON))
+
+    def click_me_button(self):
+        self.element_is_visible(self.locators.CLICK_ME_BUTTON).click()
+
+    def check_clicked_on_the_double(self):
+        double_click_msg = self.element_is_visible(self.locators.DOUBLE_CLICK_MESSAGE).text
+        return double_click_msg
+    def check_clicked_on_the_right(self):
+        right_click_msg = self.element_is_visible(self.locators.DOUBLE_RIGHT_MESSAGE).text
+        return right_click_msg
+    def check_clicked_on_me(self):
+        click_me_msg = self.element_is_visible(self.locators.CLICK_ME_MESSAGE).text
+        return click_me_msg
+

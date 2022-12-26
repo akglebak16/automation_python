@@ -97,6 +97,25 @@ class TestElements:
 
 class TestButtonPage():
 
-    def test_different_click_on_the_button(self,driver):
+    def test_double_click(self,driver):
         web_table_page = ButtonsPage(driver, 'https://demoqa.com/buttons')
         web_table_page.open()
+        web_table_page.double_click_button()
+        btn = web_table_page.check_clicked_on_the_double()
+        assert 'You have done a double click' == btn
+
+    def test_right_click(self,driver):
+        web_table_page = ButtonsPage(driver, 'https://demoqa.com/buttons')
+        web_table_page.open()
+        web_table_page.right_click_button()
+        btn = web_table_page.check_clicked_on_the_right()
+        assert 'You have done a right click' == btn
+
+    def test_click_on_me_btn(self,driver):
+        web_table_page = ButtonsPage(driver, 'https://demoqa.com/buttons')
+        web_table_page.open()
+        web_table_page.click_me_button()
+        btn = web_table_page.check_clicked_on_me()
+        assert 'You have done a dynamic click' == btn
+
+
